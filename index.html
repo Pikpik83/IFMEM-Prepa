@@ -6,7 +6,65 @@
 <title>Politique de confidentialité — IFMEM Prépa</title>
 <meta name="description" content="Ce que l'application IFMEM Prépa garde sur votre téléphone, ce qu'elle mesure de façon anonyme, et comment vous y opposer.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="site.css">
+<!-- style:début -->
+<style>
+:root {
+  --navy: #0D1A26; --navy-halo: #1D3A52; --teal: #12A0B4; --teal-deep: #0B7F90; --amber: #E8A03C;
+  --paper: #EDF2F4; --card: #FFFFFF; --ink: #0C1720; --ink2: #41525C; --muted: #6B7C86; --line: #DBE4E8; --glow: #E8F5F8; --dim: #8FB4BF;
+}
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 17px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--teal-deep); }
+a:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+
+.entete { background: radial-gradient(1200px 600px at 30% -20%, var(--navy-halo), var(--navy)); padding: 18px 20px; }
+.marque { display: inline-flex; align-items: center; gap: 12px; color: var(--glow); text-decoration: none; font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 20px; }
+.marque b { color: var(--teal); font-weight: 800; }
+.logo { width: 34px; height: 34px; border-radius: 9px; background: var(--navy-halo) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect x='38' y='42' width='32' height='13' rx='6.5' fill='%2312A0B4'/%3E%3Crect x='35' y='59' width='38' height='13' rx='6.5' fill='%2312A0B4'/%3E%3Crect x='32' y='76' width='44' height='14' rx='7' fill='%2312A0B4'/%3E%3Ccircle cx='54' cy='26' r='8' fill='%23E8A03C'/%3E%3C/svg%3E") center/cover; }
+
+.page { max-width: 720px; margin: 0 auto; padding: 40px 20px 56px; }
+.eyebrow { font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 12px; letter-spacing: 2.5px; text-transform: uppercase; color: var(--teal-deep); margin: 0 0 10px; }
+h1 { font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 800; font-size: clamp(30px, 5vw, 42px); line-height: 1.08; letter-spacing: -0.5px; margin: 0 0 16px; text-wrap: balance; }
+h2 { font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-weight: 700; font-size: 22px; margin: 36px 0 10px; }
+.chapo { font-size: 19px; color: var(--ink2); margin: 0 0 8px; }
+.date { font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 12.5px; color: var(--muted); margin: 0 0 8px; }
+section p, section li { color: var(--ink2); }
+section strong { color: var(--ink); font-weight: 600; }
+ul { padding-left: 22px; }
+li { margin: 4px 0; }
+.encadre { background: var(--card); border-left: 4px solid var(--teal); border-radius: 0 12px 12px 0; padding: 14px 18px; margin: 18px 0; }
+.encadre p { margin: 0; }
+.encadre-titre { font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-deep); margin-bottom: 6px !important; }
+.petit { font-size: 14px; color: var(--muted); }
+.a-completer { background: #FBEEDB; color: #8A5410; padding: 1px 6px; border-radius: 4px; font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 14px; }
+
+.pied { border-top: 1px solid var(--line); padding: 22px 20px 36px; text-align: center; font-size: 13.5px; color: var(--muted); }
+.pied p { max-width: 720px; margin: 6px auto; }
+
+/* Page d'accueil */
+.hero { background: radial-gradient(1400px 800px at 30% -20%, var(--navy-halo), var(--navy)); color: var(--glow); padding: 56px 20px 64px; }
+.hero-int { max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: center; }
+.hero h1 { color: var(--glow); font-size: clamp(36px, 6vw, 58px); }
+.hero h1 span { color: var(--teal); }
+.hero p { color: var(--dim); font-size: 19px; max-width: 48ch; }
+.hero .eyebrow { color: var(--teal); }
+.badges { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; align-items: center; }
+.bouton { display: inline-block; background: var(--teal); color: #fff; text-decoration: none; font-weight: 600; padding: 13px 22px; border-radius: 12px; }
+.bouton.secondaire { background: transparent; color: var(--glow); border: 1px solid #2A4A62; }
+.tel { justify-self: center; width: min(280px, 70vw); aspect-ratio: 1080 / 2400; max-height: 560px; border-radius: 36px; overflow: hidden; border: 6px solid #1F3A50; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+.tel img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.atouts { max-width: 960px; margin: 0 auto; padding: 44px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.atout { background: var(--card); border-radius: 14px; padding: 18px; }
+.atout h3 { margin: 0 0 6px; font-size: 17px; }
+.atout p { margin: 0; color: var(--ink2); font-size: 15px; }
+@media (max-width: 720px) { .hero-int { grid-template-columns: 1fr; } .tel { order: -1; } }
+</style>
+<!-- style:fin -->
 </head>
 <body>
 <header class="entete">
